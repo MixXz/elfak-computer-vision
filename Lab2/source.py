@@ -35,6 +35,7 @@ coin_mask = morphological_reconstruction(copper_open, mask_filtered)
 
 output = cv.bitwise_and(img, img, mask=coin_mask)
 cv.imshow('output', output)
+cv.waitKey(0)
 
 cv.imwrite(f'{OUTPUT_PATH}coin_mask.png', coin_mask)
 cv.imwrite(f'{OUTPUT_PATH}output_coin.png', output)
